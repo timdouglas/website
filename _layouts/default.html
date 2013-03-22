@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <title>Tim Douglas | {{ page.title }}</title>
+  <!-- metas -->
+
+  <!-- css -->
+  <link href="/css/main.css" type="text/css" rel="stylesheet" />
+  {% if page.title == 'Home' %}
+    <link href="/css/home.css" type="text/css" rel="stylesheet" />
+  {% endif %}
+
+  <!-- js -->
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="side">
+      <header class="page-head">
+        <h1>Tim Douglas</h1>
+      </header>
+      <p><img src="http://www.gravatar.com/avatar/4f583d67bb3e446afb115079b08cff00?s=200" alt="Photo of me"/></p>
+      <p>Bath and Bristol-based Web Developer. Rugby fan. Geek.</p>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About Me</a></li>
+          <li><a href="https://github.com/timdouglas">Projects</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </li>
+      </nav>
+    </div>
+    <div class="page">
+      <div class="content">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+  <footer class="page-foot">&copy; Tim Douglas {{ 'now' | date: "%Y" }}</footer>
+</body>
+</html>

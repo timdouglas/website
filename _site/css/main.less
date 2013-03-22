@@ -1,0 +1,247 @@
+@import-once "mixins.less";
+@import-once "fonts.less";
+@import-once "normalize.less";
+@import-once "colours.less";
+
+*
+{
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html
+{
+  font-size: 62.5%; //force 1rem == 10px (for easier maths), see http://snook.ca/archives/html_and_css/font-size-with-rem
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body
+{
+  background: @page_bg;
+  color: #fff;
+  .font-size(14);
+  height: 100%;
+}
+
+a
+{
+  color: @a;
+  text-decoration: none;
+  border-bottom: 1px dotted @a_border;
+
+  &:visited
+  {
+    color: @a_visited;
+  }
+}
+
+.page-wrapper
+{
+  height: 97%;
+  width: 100%;
+  .clearfix;
+
+  .side
+  {
+    float: left;
+    height: 100%;
+    width: 17%;
+    text-align: center;
+    padding: 20px;
+    padding: 2rem;
+    font-family: 'Carme', sans-serif;
+    font-weight: 400;
+    background: @page_bg;
+    .clearfix;
+
+    header
+    {
+      h1
+      {
+        font-weight: 400;
+        font-family: 'Inder', sans-serif;
+        margin: 0;
+        padding: 0;
+        .font-size(42);
+
+        -webkit-text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+        -moz-text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+        -o-text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+        -ms-text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+        text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+      }
+    }
+
+    p
+    {
+      color: @side_text;
+
+      img
+      {
+        height: 130px;
+        height: 13rem;
+        width: auto;
+      }
+    }
+
+    nav
+    {
+      ul
+      {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li
+        {
+          margin: 10px 0;
+          margin: 1rem 0;
+
+          a
+          {
+            color: @side_text;
+            &:visited
+            {
+              color: @side_text;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .page
+  {
+    background: @content_bg;
+    color: @text;
+    float: left;
+    min-height: 100%;
+    width: 83%;
+    padding: 20px;
+    padding: 2rem;
+    .shadow(3px, 0, 5px, 0, rgba(0,0,0,1));
+    .shadow(0.3rem, 0, 0.5rem, 0, rgba(0,0,0,1));
+    .clearfix;
+
+    header
+    {
+      font-family: 'arimo' sans-serif;
+      h1
+      {
+        margin: 0;
+        padding: 0;
+        font-weight: 700;
+        .font-size(40);
+      }
+      p
+      {
+        font-weight: 400;
+        .font-size(18);
+      }
+    }
+
+    article
+    {
+      margin: 5px 0;
+      margin: 5rem 0;
+      line-height: 19px;
+      line-height: 1.9rem;
+    }
+
+    section
+    {
+      ul.contact
+      {
+        li
+        {
+          line-height: 2.4rem;
+
+          iframe
+          {
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+
+    .photos
+    {
+      line-height: 0;
+         
+     -webkit-column-count: 2;
+     -webkit-column-gap:   0px;
+     -moz-column-count:    2;
+     -moz-column-gap:      0px;
+     column-count:         2;
+     column-gap:           0px;
+
+      img
+      {
+        width: 100%;
+        height: auto;
+      }
+
+      @media only screen and (max-width: @small)
+      {
+        -moz-column-count:    1;
+        -webkit-column-count: 1;
+        column-count:         1;
+      }
+    }
+  }
+
+  @media only screen and (max-width: @wide)
+  {
+    .page
+    {
+      width: 78%;
+    }
+    .side
+    {
+      width: 22%;
+    }
+  }
+
+  @media only screen and (max-width: @mid)
+  {
+    .page
+    {
+      width: 70%;
+    }
+    .side
+    {
+      width: 30%;
+    }
+  }
+
+  @media only screen and (max-width: @small)
+  {
+    height: auto;
+    .page, .side
+    {
+      float: none;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+footer
+{
+  text-align: right;
+  padding: 10px 10px 0 10px;
+  padding: 1rem 1rem 0 1rem;
+  background: @page_bg;
+
+  @media only screen and (max-width: @small)
+  {
+    padding: 10px;
+    padding: 1rem;
+  }
+}

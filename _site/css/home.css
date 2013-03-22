@@ -1,0 +1,3 @@
+
+.welcome{font-family:'arimo' sans-serif;font-weight:700;font-size:28px;font-size:2.8rem;}
+.posts{font-family:'arimo' sans-serif;font-weight:400;}.posts ul{list-style:none;margin:0;padding:0;}.posts ul li{width:50%;margin:10px 0;margin:1rem 0;padding:20px;padding:2rem;background:#eeeeee;}@media only screen and (max-width:620px){.posts ul li{width:100%;}}.posts ul li h2{margin:0;}.posts ul li h2 a{text-decoration:none;}

@@ -1,0 +1,21 @@
+---
+layout: post
+title: Switching to Feedly
+categories: [stuff]
+tags: [new-things, web]
+summary: After Google Reader was earmarked for closure, I thought I'd give Feedly a go...
+---
+
+I LOVE Google Reader.
+
+Or should that be LOVED Google Reader.
+
+When I heard the news that Google was closing the cornerstone of pretty much every lunchtime for the last few years, I was pretty annoyed. I know it was on the cards for a while, I know that maintaining and supporting Reader didn't make commercial sense, and yet I still felt slightly betrayed.  Google Reader was the first Google side-product I really used in anger, and was probably the launchpad into my current mostly-google-centered-web-life.  I had spent years cultivating feeds, and would automatically open it when I got back to my desk after getting lunch.  It was my way of easing myself into the afternoon.
+
+But still, musn't grumble...
+
+That feeling of betrayal didn't last long, I opened up Google Reader one last time, scanned my feeds for some articles about the shut down (there were lots...) and read the ones that suggested alternatives.  I opened up a couple and had a look, and it was [feedly](http://feedly.com/) that caught my eye.
+
+It has a nice simple, yet customisable (well, themes) design, allowed me to seemlessly pull over all my Google Reader feeds and keep their categorisations etc, and even has similar keyboard shortcuts.  Within a minute or so, I was reading my 'favourites' feed as normal.  Admittedly I did have to make a few changes to the default settings to get things as I wanted - I disabled the stupid "magazine" style of reading feeds, set the feeds to be oldest first & unread only, and changed the colour scheme to something slightly more palatable, but it was a straightforward process.
+
+The only real annoyance is the insistence of installing browser plugins, but everybody makes mistakes...

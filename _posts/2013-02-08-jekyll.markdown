@@ -1,0 +1,13 @@
+---
+layout: post
+title: Playing with Jekyll
+categories: [stuff]
+tags: [new-things, web]
+summary: Thoughts about jekyll
+---
+
+Turns out I quite like Jeykll, despite my reservations about having to learn a templating syntax, and having to run a ruby server in development (I don't run ruby in deployment, just copy out the generated files).  It's actually a fairly straightforward process to creating a site as it turns out.  Just install the gem, configure your environment, make a couple of template files, write a few posts and bang! You have a fairly simple blog & website.
+
+I quite like being able to write posts in markdown, much more lightweight than using a fully-fledged CMS like wordpress.  Don't get me wrong wordpress has its place, but just seems a bit cumbersome for something as simple as this site.
+
+Hopefully the ease of blogging will be enough to make me start blogging again, but who knows...

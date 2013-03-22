@@ -1,0 +1,55 @@
+@import-once "mixins.less";
+@import-once "colours.less";
+
+.welcome
+{
+  font-family: 'arimo' sans-serif;
+  font-weight: 700;
+  .font-size(28);
+}
+
+.posts
+{
+  font-family: 'arimo' sans-serif;
+  font-weight: 400;
+
+  ul
+  {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li
+    {
+      width: 50%;
+      margin: 10px 0;
+      margin: 1rem 0;
+      padding: 20px;
+      padding: 2rem;
+      background: @post_summary;
+
+      @media only screen and (max-width: @small)
+      {
+        width: 100%;
+      }
+
+      h2
+      {
+        margin: 0;
+        a
+        {
+          text-decoration: none;
+        }
+      }
+      p
+      {
+
+      }
+    }
+  }
+}
+
+.pagination
+{
+
+}

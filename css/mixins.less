@@ -1,0 +1,240 @@
+//###############################################
+//################# HELPERS #####################
+//###############################################
+
+.clearfix()
+{
+  //clearfix: For clearing floats like a boss h5bp.com/q
+
+  *zoom: 1;
+  &:before, &:after 
+  {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after 
+  {
+    clear: both;
+  }
+}
+
+.font-size(@val)
+{
+  //calculate font size in rems with fallback to pixels
+
+  @rem: @val / 10;
+  font-size: unit(@val, px);
+  font-size: unit(@rem, rem);
+}
+
+.inline-block()
+{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+.size(@s)
+{
+  width: @s;
+  height: @s;
+}
+
+.size(@w, @h)
+{
+  width: @w;
+  height: @h;
+}
+
+.size(@w, @h) when (isnumber(@w)) and (isnumber(@h)) and not (ispercentage(@w)) and not (ispercentage(@h)) and not (isem(@w)) and not (isem(@h))
+{
+  width: unit(@w, px);
+  height: unit(@h, px);
+}
+
+.size(@w, @h, @c) when (@c = true)
+{
+  .size(@w, @h);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pos(@left, @top)
+{
+  top: @top + 0px;
+  left: @left + 0px;
+}
+
+.relpos(@left, @top)
+{
+  position: relative;
+  top: @top + 0px;
+  left: @left + 0px;
+}
+
+.relpos-l(@left)
+{
+  position: relative;
+  left: @left + 0px;
+}
+
+.relpos-t(@top)
+{
+  position: relative;
+  top: @top + 0px;
+}
+
+.abspos(@left, @top)
+{
+  position: absolute;
+  top: @top + 0px;
+  left: @left + 0px;
+}
+
+.abspos-l(@left)
+{
+  position: absolute;
+  left: @left + 0px;
+}
+
+.abspos-t(@top)
+{
+  position: absolute;
+  top: @top + 0px;
+}
+
+//###############################################
+//################## CSS 3 ######################
+//###############################################
+.rounded-corners(@radius)
+{
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.rounded-corners(@top, @bottom)
+{
+  -moz-border-radius: @top @top @bottom @bottom;
+  -webkit-border-radius: @top @top @bottom @bottom;
+  border-radius: @top @top @bottom @bottom;
+}
+
+.rounded-corners(@tl, @tr, @br, @bl)
+{
+  -moz-border-radius: @tl @tr @br @bl;
+  -webkit-border-radius: @tl @tr @br @bl;
+  border-radius: @tl @tr @br @bl;
+}
+
+.animate(@op: all, @time: 0.4s, @easing: ease)
+{
+  -webkit-transition: @op @time @easing;
+  -moz-transition: @op @time @easing;
+  -o-transition: @op @time @easing;
+  -ms-transition: @op @time @easing;
+  transition: @op @time @easing;
+}
+
+.shadow(@horizontal-offset, @vertical-offset, @blur, @spread, @colour, @inset)
+{
+  -webkit-box-shadow: @horizontal-offset @vertical-offset @blur @spread @colour @inset;
+  -moz-box-shadow: @horizontal-offset @vertical-offset @blur @spread @colour @inset;
+  box-shadow: @horizontal-offset @vertical-offset @blur @spread @colour @inset;
+}
+
+.shadow(@horizontal-offset, @vertical-offset, @blur, @spread, @colour)
+{
+  -webkit-box-shadow: @horizontal-offset @vertical-offset @blur @spread @colour;
+  -moz-box-shadow: @horizontal-offset @vertical-offset @blur @spread @colour;
+  box-shadow: @horizontal-offset @vertical-offset @blur @spread @colour;
+}
+
+.shadow(@sides, @blur, @spread, @colour, @inset)
+{
+  -webkit-box-shadow: @sides @sides @blur @spread @colour @inset;
+  -moz-box-shadow: @sides @sides @blur @spread @colour @inset;
+  box-shadow: @sides @sides @blur @spread @colour @inset;
+}
+
+.shadow(@sides, @blur, @spread, @colour)
+{
+  -webkit-box-shadow: @sides @sides @blur @spread @colour;
+  -moz-box-shadow: @sides @sides @blur @spread @colour;
+  box-shadow: @sides @sides @blur @spread @colour;
+}
+
+.shadow(@sides, @blur, @colour)
+{
+  -webkit-box-shadow: @sides @sides @blur @colour;
+  -moz-box-shadow: @sides @sides @blur @colour;
+  box-shadow: @sides @sides @blur @colour;
+}
+
+.transformX(@d)
+{
+  -webkit-transform: rotateX(@d);
+  -moz-transform: rotateX(@d);
+  -o-transform: rotateX(@d);
+  -ms-transform: rotateX(@d);
+  transform: rotateX(@d);
+}
+
+.transformY(@d)
+{
+  -webkit-transform: rotateY(@d);
+  -moz-transform: rotateY(@d);
+  -o-transform: rotateY(@d);
+  -ms-transform: rotateY(@d);
+  transform: rotateY(@d);
+}
+
+.transformZ(@d)
+{
+  -webkit-transform: rotateZ(@d);
+  -moz-transform: rotateZ(@d);
+  -o-transform: rotateZ(@d);
+  -ms-transform: rotateZ(@d);
+  transform: rotateZ(@d);
+}
+
+.rotate(@deg)
+{
+  -webkit-transform: rotate(@deg);
+  -moz-transform: rotate(@deg);
+  -o-transform: rotate(@deg);
+  -ms-transform: rotate(@deg);
+  transform: rotate(@deg);
+}
+
+#gradient {
+  .horizontal (@start-color, @end-color)
+  {
+    background-color: @end-color;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, right top, from(@start-color), to(@end-color)); /* Konqueror */
+    background-image: -moz-linear-gradient(left, @start-color, @end-color); /* FF 3.6+ */
+    background-image: -ms-linear-gradient(left, @start-color, @end-color); /* IE10 */
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, @start-color), color-stop(100%, @end-color)); /* Safari 4+, Chrome 2+ */
+    background-image: -webkit-linear-gradient(left, @start-color, @end-color); /* Safari 5.1+, Chrome 10+ */
+    background-image: -o-linear-gradient(left, @start-color, @end-color); /* Opera 11.10 */
+    background-image: -ms-linear-gradient(left, @start-color 0%, @end-color 100%);  /* IE10+ */
+    background-image: linear-gradient(left, @start-color, @end-color); /* the standard */
+  }
+  .vertical (@start-color, @end-color)
+  {
+    background-color: @end-color;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, left bottom, from(@start-color), to(@end-color)); /* Konqueror */
+    background-image: -moz-linear-gradient(@start-color, @end-color); /* FF 3.6+ */
+    background-image: -ms-linear-gradient(@start-color, @end-color); /* IE10 */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @start-color), color-stop(100%, @end-color)); /* Safari 4+, Chrome 2+ */
+    background-image: -webkit-linear-gradient(@start-color, @end-color); /* Safari 5.1+, Chrome 10+ */
+    background-image: -o-linear-gradient(@start-color, @end-color); /* Opera 11.10 */
+    background-image: -ms-linear-gradient(top, @start-color 0%, @end-color 100%);  /* IE10+ */
+    background-image: linear-gradient(@start-color, @end-color); /* the standard */
+  }
+}

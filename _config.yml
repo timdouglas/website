@@ -1,0 +1,7 @@
+auto: true
+server_port: 4000
+baseurl: /me
+url: http://localhost:4000
+permalink: /blog/:title.html
+paginate: 10
+safe: true

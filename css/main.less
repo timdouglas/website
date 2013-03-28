@@ -74,6 +74,8 @@ a
         -o-text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
         -ms-text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
         text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+
+        -webkit-text-stroke: 0.5px; //smooths fonts on chrome
       }
     }
 
@@ -117,7 +119,7 @@ a
 
   .page
   {
-    background: @content_bg;
+    background: @content_bg url("/imgs/swirl.png") top left repeat;
     color: @text;
     float: left;
     min-height: 100%;
@@ -137,6 +139,7 @@ a
         padding: 0;
         font-weight: 700;
         .font-size(40);
+        -webkit-text-stroke: 0.25px; //smooths fonts on chrome
       }
       p
       {

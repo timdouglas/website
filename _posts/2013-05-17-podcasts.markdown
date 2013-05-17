@@ -1,0 +1,76 @@
+---
+layout: post
+title: Podcasts
+categories: [stuff]
+tags: [listening, web]
+summary: Some musings on the podcasts I enjoy, and how I listen to them
+---
+
+Although I've been listening to podcasts for a while, I've recently started listening
+to them a lot more.  This has indirectly been caused by Google's retirement of Google
+Reader.  In the good old days of Reader, I would manage my podcasts using a Google-made
+Android app called Listen.  Listen would integrate with Google Reader to manage your
+subscriptions, which made life super easy in synchronising listening between different
+devices.  But sans Reader, I've had to look for other options.  After a few misses,
+I stumbled upon [BeyondPod](https://play.google.com/store/apps/details?id=mobi.beyondpod).
+It's a great little podcast manager, with some advanced features for power-users and a high
+level of customisability (is that a word??).
+
+It was fairly easy to import my existing subscriptions across from Google Reader (well, 
+[Feedly]({% post_url 2013-03-22-feedly %}) now), and also has good search features to add
+new feeds.
+
+So, without further ado, I'm listening to:
+
+ * [Click](http://www.bbc.co.uk/programmes/n13xtmd5) - A weekly show on the BBC World Service about the weekly tech news.
+ It's a bit more "user-friendly" than other shows, but provides a good round up.
+
+ * [Comedy of the Week](http://www.bbc.co.uk/podcasts/series/comedy) - The comedy of the week from BBC Radio 4, usually makes
+ me look a bit of an idiot grinning mid-commute...
+
+ * [Execute Podcast](http://theindustry.cc/category/podcast/) - Interview show featuring people who make things (mostly 
+ for the web).  Really Inspiring.
+
+ * [Friday Night Comedy from BBC Radio 4](http://www.bbc.co.uk/podcasts/series/fricomedy) - Another grin-inducer.  Depending on 
+ what is on air, usually either The Now Show or the The News Quiz.
+
+ * [Happy Monday Podcast](http://happymondaypodcast.com) - A (relatively) short weekly interview show with web-folk.
+ Probably has the best theme tune in this list.
+
+* [In Our Time](http://www.bbc.co.uk/programmes/b006qykl) - Melvyn Bragg discusess a subject (could be anything!) with 
+experts in the field.
+
+* [The Media Show](http://www.bbc.co.uk/programmes/b00dv9hq) - Another from BBC Radio 4, weekly show covering the issues
+affecting todays media landscape.
+
+* [Science Weekly](http://www.guardian.co.uk/science/series/science) - Science news show from The Guardian, featuring news, features 
+interviews.
+
+* [ShopTalk](http://shoptalkshow.com) - Sound effects podcast about front-end web development.
+
+* [Tech Weekly](http://www.guardian.co.uk/technology/series/techweekly) - Like Science Weekly, but for Tech news. Not as good as it was...
+
+* [The Big Web Show](http://5by5.tv/bigwebshow) - "It's everything web that matters", and it's presented by 
+Jeffery Zeldman.
+
+* [The East Wing](http://theeastwing.net) - Another web design/development/stuff show, but no worse for it :)
+
+* [The Frequency](http://5by5.tv/frequency) - A weekly news show covering web stuff and real world things that matter.
+
+* [The Infinite Monkey Cage](http://www.bbc.co.uk/programmes/b00snr0w) - Prof Brian Cox and Robin Ince + guests use science to
+make the World right again.
+
+* [The Life Scientific](http://www.bbc.co.uk/programmes/b015sqc7) - A look back at the life and career of a scientist leading their
+field.  Fascinating.
+
+* [The Non Breaking Space Show](http://nonbreakingspace.tv/) - An interview show, talking to major players in the
+web dev & design spheres.
+
+* [The Web Ahead](http://5by5.tv/webahead) - Jen Simmons discusses the new technologies and methodologies
+available to web designers and developers with a guest or two.
+
+* [Unfinished Business](http://unfinished.bz/) - A weekly discussion show about the business end, the sharp end of web, 
+design and creative industries.  With jokes.
+
+* [Upfront Podcast](http://upfrontpodcast.com/) - An in-depth discussion on the latest tooling, workflow and best practices for 
+front-end developers.  One of the few tech shows that doesn't seem to worry about Photoshop.

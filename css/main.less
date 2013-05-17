@@ -40,6 +40,16 @@ a
   }
 }
 
+h1, h2, h3, h4, h5 
+{
+  font-family: 'Inder',sans-serif;
+
+  a
+  {
+    font-family: 'arimo' sans-serif;  
+  }
+}
+
 .page-wrapper
 {
   height: 97%;
@@ -63,17 +73,18 @@ a
     {
       h1
       {
+        color: #000;
         font-weight: 400;
         font-family: 'Inder', sans-serif;
         margin: 0;
         padding: 0;
         .font-size(42);
 
-        -webkit-text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
-        -moz-text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
-        -o-text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
-        -ms-text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
-        text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+        -webkit-text-shadow: 0px 0px 1px rgba(0,0,0,0.8);
+        -moz-text-shadow: 0px 0px 1px rgba(0,0,0,0.8);
+        -o-text-shadow: 0px 0px 1px rgba(0,0,0,0.8);
+        -ms-text-shadow: 0px 0px 1px rgba(0,0,0,0.8);
+        text-shadow: 0px 0px 1px rgba(0,0,0,0.8);
 
         -webkit-text-stroke: 0.5px; //smooths fonts on chrome
       }
@@ -88,6 +99,8 @@ a
         height: 130px;
         height: 13rem;
         width: auto;
+
+        .rounded-corners(50%);
       }
     }
 
@@ -119,15 +132,16 @@ a
 
   .page
   {
-    background: @content_bg url("/imgs/swirl.png") top left repeat;
+    background: @content_bg;
     color: @text;
     float: left;
     min-height: 100%;
     width: 83%;
     padding: 20px;
     padding: 2rem;
-    .shadow(3px, 0, 5px, 0, rgba(0,0,0,1));
-    .shadow(0.3rem, 0, 0.5rem, 0, rgba(0,0,0,1));
+    .shadow(3px, 3, 100px, 0, rgba(0,0,0,0.75));
+    .shadow(0.3rem, 0.3rem, 10rem, 0, rgba(0,0,0,0.75));
+    
     .clearfix;
 
     header
@@ -247,6 +261,7 @@ a
 
 footer
 {
+  color: @side_text;
   text-align: right;
   padding: 10px 10px 0 10px;
   padding: 1rem 1rem 0 1rem;

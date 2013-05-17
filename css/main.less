@@ -94,6 +94,12 @@ h1, h2, h3, h4, h5
     {
       color: @side_text;
 
+      .main-img-link
+      {
+        text-decoration: none;
+        border: 0 none;
+      }
+
       img
       {
         height: 130px;
@@ -154,6 +160,8 @@ h1, h2, h3, h4, h5
         font-weight: 700;
         .font-size(40);
         -webkit-text-stroke: 0.25px; //smooths fonts on chrome
+        letter-spacing: -10px;
+        letter-spacing: -0.1rem;
       }
       p
       {
@@ -209,6 +217,22 @@ h1, h2, h3, h4, h5
         -moz-column-count:    1;
         -webkit-column-count: 1;
         column-count:         1;
+      }
+    }
+
+    nav.post-navigation
+    {
+      .clearfix;
+      width: 100%;
+
+      .left
+      {
+        float: left;
+      }
+
+      .right
+      {
+        float: right;
       }
     }
   }

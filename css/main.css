@@ -46,15 +46,20 @@ h1,h2,h3,h4,h5{font-family:'Inder',sans-serif;}h1 a,h2 a,h3 a,h4 a,h5 a{font-fam
 .page-wrapper .side{float:left;height:100%;width:17%;text-align:center;padding:20px;padding:2rem;font-family:'Carme',sans-serif;font-weight:400;background:#bcffe8;*zoom:1;}.page-wrapper .side:before,.page-wrapper .side:after{display:table;content:"";line-height:0;}
 .page-wrapper .side:after{clear:both;}
 .page-wrapper .side header h1{color:#000;font-weight:400;font-family:'Inder',sans-serif;margin:0;padding:0;font-size:42px;font-size:4.2rem;-webkit-text-shadow:0px 0px 1px rgba(0, 0, 0, 0.8);-moz-text-shadow:0px 0px 1px rgba(0, 0, 0, 0.8);-o-text-shadow:0px 0px 1px rgba(0, 0, 0, 0.8);-ms-text-shadow:0px 0px 1px rgba(0, 0, 0, 0.8);text-shadow:0px 0px 1px rgba(0, 0, 0, 0.8);-webkit-text-stroke:0.5px;}
-.page-wrapper .side p{color:#454b1d;}.page-wrapper .side p img{height:130px;height:13rem;width:auto;-moz-border-radius:50%;-webkit-border-radius:50%;border-radius:50%;}
+.page-wrapper .side p{color:#454b1d;}.page-wrapper .side p .main-img-link{text-decoration:none;border:0 none;}
+.page-wrapper .side p img{height:130px;height:13rem;width:auto;-moz-border-radius:50%;-webkit-border-radius:50%;border-radius:50%;}
 .page-wrapper .side nav ul{list-style:none;margin:0;padding:0;}.page-wrapper .side nav ul li{margin:10px 0;margin:1rem 0;}.page-wrapper .side nav ul li a{color:#454b1d;}.page-wrapper .side nav ul li a:visited{color:#454b1d;}
 .page-wrapper .page{background:#ffffff;color:#000000;float:left;min-height:100%;width:83%;padding:20px;padding:2rem;-webkit-box-shadow:3px 3 100px 0 rgba(0, 0, 0, 0.75);-moz-box-shadow:3px 3 100px 0 rgba(0, 0, 0, 0.75);box-shadow:3px 3 100px 0 rgba(0, 0, 0, 0.75);-webkit-box-shadow:3px 3px 3 100px 0 rgba(0, 0, 0, 0.75);-moz-box-shadow:3px 3px 3 100px 0 rgba(0, 0, 0, 0.75);box-shadow:3px 3px 3 100px 0 rgba(0, 0, 0, 0.75);-webkit-box-shadow:0.3rem 0.3rem 10rem 0 rgba(0, 0, 0, 0.75);-moz-box-shadow:0.3rem 0.3rem 10rem 0 rgba(0, 0, 0, 0.75);box-shadow:0.3rem 0.3rem 10rem 0 rgba(0, 0, 0, 0.75);-webkit-box-shadow:0.3rem 0.3rem 0.3rem 10rem 0 rgba(0, 0, 0, 0.75);-moz-box-shadow:0.3rem 0.3rem 0.3rem 10rem 0 rgba(0, 0, 0, 0.75);box-shadow:0.3rem 0.3rem 0.3rem 10rem 0 rgba(0, 0, 0, 0.75);*zoom:1;}.page-wrapper .page:before,.page-wrapper .page:after{display:table;content:"";line-height:0;}
 .page-wrapper .page:after{clear:both;}
-.page-wrapper .page header{font-family:'arimo' sans-serif;}.page-wrapper .page header h1{margin:0;padding:0;font-weight:700;font-size:40px;font-size:4rem;-webkit-text-stroke:0.25px;}
+.page-wrapper .page header{font-family:'arimo' sans-serif;}.page-wrapper .page header h1{margin:0;padding:0;font-weight:700;font-size:40px;font-size:4rem;-webkit-text-stroke:0.25px;letter-spacing:-10px;letter-spacing:-0.1rem;}
 .page-wrapper .page header p{font-weight:400;font-size:18px;font-size:1.8rem;}
 .page-wrapper .page article{margin:5px 0;margin:5rem 0;line-height:19px;line-height:1.9rem;}
 .page-wrapper .page section ul.contact li{line-height:2.4rem;}.page-wrapper .page section ul.contact li iframe{display:inline-block;vertical-align:middle;}
 .page-wrapper .page .photos{line-height:0;-webkit-column-count:2;-webkit-column-gap:0px;-moz-column-count:2;-moz-column-gap:0px;column-count:2;column-gap:0px;}.page-wrapper .page .photos img{width:100%;height:auto;}
 @media only screen and (max-width:620px){.page-wrapper .page .photos{-moz-column-count:1;-webkit-column-count:1;column-count:1;}}
+.page-wrapper .page nav.post-navigation{*zoom:1;width:100%;}.page-wrapper .page nav.post-navigation:before,.page-wrapper .page nav.post-navigation:after{display:table;content:"";line-height:0;}
+.page-wrapper .page nav.post-navigation:after{clear:both;}
+.page-wrapper .page nav.post-navigation .left{float:left;}
+.page-wrapper .page nav.post-navigation .right{float:right;}
 @media only screen and (max-width:1075px){.page-wrapper .page{width:78%;} .page-wrapper .side{width:22%;}}@media only screen and (max-width:875px){.page-wrapper .page{width:70%;} .page-wrapper .side{width:30%;}}@media only screen and (max-width:620px){.page-wrapper{height:auto;}.page-wrapper .page,.page-wrapper .side{float:none;width:100%;height:auto;} .page-wrapper .side nav ul li{display:inline-block;margin:0 10px;margin:0 1rem;}}
 footer{color:#454b1d;text-align:right;padding:10px 10px 0 10px;padding:1rem 1rem 0 1rem;background:#bcffe8;}@media only screen and (max-width:620px){footer{padding:10px;padding:1rem;}}

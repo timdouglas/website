@@ -6,15 +6,19 @@
   <meta name="charset" content="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="author" content="Tim Douglas">
+  <meta name="description" content="The place on the web for all things Tim Douglas">
+  {% if page.title == 'Home' %}
+  <meta name="google-site-verification" content="Jdocj97vN-jYAQdfp_gcMYC5OsmuS0N8TZeGaqf6cLA" />
+  {% endif %}
 
   <!-- css -->
   <link href="/css/main.css" type="text/css" rel="stylesheet" />
   {% if page.title == 'Home' %}
-    <link href="/css/home.css" type="text/css" rel="stylesheet" />
+  <link href="/css/home.css" type="text/css" rel="stylesheet" />
   {% endif %}
 
   {% if page.title == 'Projects' %}
-    <link href="/css/jquery.github.css" type="text/css" rel="stylesheet" /> <!-- jquery github css -->
+  <link href="/css/jquery.github.css" type="text/css" rel="stylesheet" /> <!-- jquery github css -->
   {% endif %}
 </head>
 <body>

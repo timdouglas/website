@@ -53,7 +53,8 @@ h1,h2,h3,h4,h5{font-family:'Inder',sans-serif;}h1 a,h2 a,h3 a,h4 a,h5 a{font-fam
 .page-wrapper .page:after{clear:both;}
 .page-wrapper .page header{font-family:'arimo' sans-serif;}.page-wrapper .page header h1{margin:0;padding:0;font-weight:700;font-size:40px;font-size:4rem;-webkit-text-stroke:0.25px;letter-spacing:-0.1rem;}
 .page-wrapper .page header p{font-weight:400;font-size:18px;font-size:1.8rem;}
-.page-wrapper .page article{margin:5px 0;margin:5rem 0;line-height:19px;line-height:1.9rem;}
+.page-wrapper .page article{margin:5px 0;margin:5rem 0;line-height:19px;line-height:1.9rem;}.page-wrapper .page article p img[alt]{width:50%;height:auto;padding:10px;padding:1rem;float:right;}
+.page-wrapper .page article pre{background-color:#eeeeee;width:50%;overflow-x:scroll;padding:0.5rem;white-space:pre;}
 .page-wrapper .page section ul.contact li{line-height:2.4rem;}.page-wrapper .page section ul.contact li iframe{display:inline-block;vertical-align:middle;}
 .page-wrapper .page .photos{line-height:0;-webkit-column-count:2;-webkit-column-gap:0px;-moz-column-count:2;-moz-column-gap:0px;column-count:2;column-gap:0px;}.page-wrapper .page .photos img{width:100%;height:auto;}
 @media only screen and (max-width:620px){.page-wrapper .page .photos{-moz-column-count:1;-webkit-column-count:1;column-count:1;}}

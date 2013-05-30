@@ -1,5 +1,6 @@
 @import-once "mixins.less";
 @import-once "colours.less";
+@import-once "main.less";
 
 .welcome
 {
@@ -21,6 +22,7 @@
 
     li
     {
+      position: relative;
       width: 50%;
       margin: 10px 0;
       margin: 1rem 0;
@@ -44,6 +46,13 @@
       p
       {
 
+      }
+      div
+      {
+        position: absolute;
+        right: 0;
+        margin-right: 5px;
+        margin-right: 0.5rem;
       }
     }
   }

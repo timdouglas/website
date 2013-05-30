@@ -69,25 +69,22 @@ h1, h2, h3, h4, h5
     background: @page_bg;
     .clearfix;
 
-    header
+    header h1
     {
-      h1
-      {
-        color: #000;
-        font-weight: 400;
-        font-family: 'Inder', sans-serif;
-        margin: 0;
-        padding: 0;
-        .font-size(42);
+      color: #000;
+      font-weight: 400;
+      font-family: 'Inder', sans-serif;
+      margin: 0;
+      padding: 0;
+      .font-size(42);
 
-        -webkit-text-shadow: 0px 0px 1px rgba(0,0,0,0.8);
-        -moz-text-shadow: 0px 0px 1px rgba(0,0,0,0.8);
-        -o-text-shadow: 0px 0px 1px rgba(0,0,0,0.8);
-        -ms-text-shadow: 0px 0px 1px rgba(0,0,0,0.8);
-        text-shadow: 0px 0px 1px rgba(0,0,0,0.8);
+      -webkit-text-shadow: 0px 0px 1px rgba(0,0,0,0.8);
+      -moz-text-shadow: 0px 0px 1px rgba(0,0,0,0.8);
+      -o-text-shadow: 0px 0px 1px rgba(0,0,0,0.8);
+      -ms-text-shadow: 0px 0px 1px rgba(0,0,0,0.8);
+      text-shadow: 0px 0px 1px rgba(0,0,0,0.8);
 
-        -webkit-text-stroke: 0.5px; //smooths fonts on chrome
-      }
+      -webkit-text-stroke: 0.5px; //smooths fonts on chrome
     }
 
     p
@@ -160,7 +157,7 @@ h1, h2, h3, h4, h5
         font-weight: 700;
         .font-size(40);
         -webkit-text-stroke: 0.25px; //smooths fonts on chrome
-        letter-spacing: -10px;
+        //letter-spacing: -10px; //keep default letter spacing for older browsers...
         letter-spacing: -0.1rem;
       }
       p
@@ -283,6 +280,18 @@ h1, h2, h3, h4, h5
   }
 }
 
+.ie-side()
+{
+  width:15%;
+  float:left;
+}
+
+.ie-page()
+{
+  width:75%;
+  float:right;
+}
+
 footer
 {
   color: @side_text;
@@ -296,4 +305,26 @@ footer
     padding: 10px;
     padding: 1rem;
   }
+}
+
+//ie6
+.suckyie6.page-wrapper .side
+{
+  .ie-side;
+}
+
+.suckyie6.page-wrapper .page
+{
+  .ie-page;
+}
+
+//ie7
+*+html .page-wrapper .side
+{
+  .ie-side;
+}
+
+*+html .page-wrapper .page
+{
+  .ie-page;
 }

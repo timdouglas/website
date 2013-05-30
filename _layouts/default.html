@@ -4,6 +4,7 @@
   <title>Tim Douglas | {{ page.title }}</title>
   <!-- metas -->
   <meta name="charset" content="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="author" content="Tim Douglas">
   <meta name="description" content="The place on the web for all things Tim Douglas">
@@ -11,14 +12,21 @@
   <meta name="google-site-verification" content="Jdocj97vN-jYAQdfp_gcMYC5OsmuS0N8TZeGaqf6cLA" />
   {% endif %}
 
+  <!--[if lt IE 9]>
+  <script src="/js/html5shiv.js"></script>
+  <script src="/js/shim.min.js"></script>
+  <![endif]-->
+
   <!-- css -->
-  <link href="/css/main.css" type="text/css" rel="stylesheet" />
-  {% if page.title == 'Home' %}
+  {% if page.title == 'Home' or page.title == 'Posts' %}
   <link href="/css/home.css" type="text/css" rel="stylesheet" />
+  {% else %}
+  <link href="/css/main.css" type="text/css" rel="stylesheet" />
   {% endif %}
 
   {% if page.title == 'Projects' %}
   <link href="/css/jquery.github.css" type="text/css" rel="stylesheet" /> <!-- jquery github css -->
+  <script src="/js/githubprojects.js"></script> <!-- jquery github js loader -->
   {% endif %}
 </head>
 <body>
@@ -33,12 +41,16 @@
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/about.html">About Me</a></li>
+          <li><a href="/posts.html">Posts</a></li>
           <li><a href="/projects.html">Projects</a></li>
           <li><a href="/contact.html">Contact</a></li>
-        </li>
+        </ul>
       </nav>
     </div>
     <div class="page">
+      <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+      <![endif]-->
       <div class="content">
         {{ content }}
       </div>

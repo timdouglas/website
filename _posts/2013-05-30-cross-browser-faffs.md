@@ -4,6 +4,7 @@ title: Cross Browser Faffing
 categories: [webdev]
 tags: [web, dev]
 summary: The things I had to do to make this site work on older browsers
+js: [/js/prism.js]
 ---
 
 Recently I was playing about with [BrowserStack](http://www.browserstack.com) (which is worth its weight in gold frankly) and noticed that this site was fairly crappily supported in older browsers.  I'm talking IE7 and under, FF3 on Windows XP etc etc.  And it wasn't just styles broken, the js loading my [projects list](/projects.html) was also pretty b0rked.
@@ -26,7 +27,8 @@ The github projects plugin I'd modified had ECMASCRIPT5 functions in it which we
 
 There was a wide range of things missing, such as `Array.isArray` and `Array.forEach`, so instead of including the prototypes for each missing function, I decided to use [yepnope](http://yepnopejs.com) to load a polyfill with them all in.  After a bit of research, I decided to use [es5-shim](https://github.com/kriskowal/es5-shim).  However I didn't want to load it into the page willynilly, so I wrote a small module wrapper to load the github projects page:
 
-```
+<pre>
+  <code class="language-javascript">
 var GithubProjects = (function(yepnope)
 {
   "use strict";
@@ -68,7 +70,8 @@ var GithubProjects = (function(yepnope)
 
   return self;
 })(yepnope);
-```
+  </code>
+</pre>
 
 It's then a simple case of just calling `GithubProjects.init()` on the projects page and all the dependecies are loaded before the plugin is executed.
 

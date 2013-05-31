@@ -43,3 +43,6 @@ var GithubProjects = (function(yepnope)
 
   return self;
 })(yepnope);
+
+//start the project loading
+GithubProjects.init();

@@ -18,16 +18,9 @@
   <![endif]-->
 
   <!-- css -->
-  {% if page.title == 'Home' or page.title == 'Posts' %}
-  <link href="/css/home.css" type="text/css" rel="stylesheet" />
-  {% else %}
-  <link href="/css/main.css" type="text/css" rel="stylesheet" />
-  {% endif %}
-
-  {% if page.title == 'Projects' %}
-  <link href="/css/jquery.github.css" type="text/css" rel="stylesheet" /> <!-- jquery github css -->
-  <script src="/js/githubprojects.js"></script> <!-- jquery github js loader -->
-  {% endif %}
+  {% for css in page.css %}
+  <link href="{{ css }}" type="text/css" rel="stylesheet" />
+  {% endfor %}
 </head>
 <body>
   <div class="page-wrapper">
@@ -57,5 +50,8 @@
     </div>
   </div>
   <footer class="page-foot">&copy; Tim Douglas {{ 'now' | date: "%Y" }}</footer>
+  {% for js in page.js %}
+  <script src="{{ js }}"></script>
+  {% endfor %}
 </body>
 </html>

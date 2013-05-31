@@ -12,6 +12,7 @@ css: [/css/home.css]
     <li>
       <h2 class="post-title" data-postdate="{{ post.date | date: "%d %B %Y" }}"><a href="{{ post.url }}">{{ post.title }}</a></h2>
       <p>{{ post.summary }}</p>
+      <div>{{ post.tags | array_to_sentence_string }}</div>
     </li>
     {% endfor %}
 </section>

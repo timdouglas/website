@@ -26,7 +26,11 @@
       <header class="page-head">
         <h1>Tim Douglas</h1>
       </header>
-      <p><a href="/" class="main-img-link"><img src="http://www.gravatar.com/avatar/4f583d67bb3e446afb115079b08cff00?s=200" alt="Photo of me"/></a></p>
+      <p>
+        <a href="/" class="main-img-link">
+          <img src="http://www.gravatar.com/avatar/4f583d67bb3e446afb115079b08cff00?s=200" alt="Photo of me" />
+        </a>
+      </p>
       <p>Bath and Bristol-based Web Developer. Rugby fan. Geek.</p>
       <nav>
         <ul>
@@ -45,6 +49,7 @@
       <div class="content">
         <header class="welcome">
   <h1>Blog Posts</h1>
+  <p>ALL the things...</p>
 </header>
 <section class="posts">
   <ul class="posts-list">
@@ -80,5 +85,32 @@
   </div>
   <footer class="page-foot">&copy; Tim Douglas 2013</footer>
   
+  <script>
+    window.onscroll = function()
+    {
+      var scroll = window.pageYOffset,
+        ela = document.getElementsByClassName("main-img-link")[0],
+        img = ela.getElementsByTagName("img")[0],
+        style = img.style,
+        pc_rotate = (scroll / 275) * 100,
+        new_rotate = (pc_rotate > 90 ? 90 : pc_rotate) * -1,
+        rotate_str = "rotate("+new_rotate+"deg)";
+
+      style.webkitTransform = rotate_str;
+      style.mozTransform = rotate_str;
+      style.oTransform = rotate_str;
+      style.msTransform = rotate_str;
+      style.transform = rotate_str;
+    };
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-34112993-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
 </body>
 </html>

@@ -6,10 +6,9 @@ tags: [web, dev]
 summary: The things I had to do to make this site work on older browsers
 js: [/js/prism.js]
 ---
+![Broken IE7...](/imgs/broken.png)
 
 Recently I was playing about with [BrowserStack](http://www.browserstack.com) (which is worth its weight in gold frankly) and noticed that this site was fairly crappily supported in older browsers.  I'm talking IE7 and under, FF3 on Windows XP etc etc.  And it wasn't just styles broken, the js loading my [projects list](/projects.html) was also pretty b0rked.
-
-![Broken IE7...](/imgs/broken.png)
 
 So instead of not caring, I decided to attempt to fix it.  This is what happened
 

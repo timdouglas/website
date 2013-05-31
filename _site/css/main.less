@@ -182,15 +182,32 @@ h1, h2, h3, h4, h5
         padding: 10px;
         padding: 1rem;
         float: right;
+
+        @media only screen and (max-width: @mid)
+        {
+          width: 100%;
+        }
+
+        @media only screen and (max-width: @small)
+        {
+          width: 100%;
+        }
       }
 
       pre
       {
         background-color: @post_summary;
-        width: 50%;
+        width: 75%;
+        max-width: 1000px;
+        max-width: 100rem;
         overflow-x: scroll;
         padding: 0.5rem;
         white-space: pre;
+
+        @media only screen and (max-width: @wide)
+        {
+          width: 100%;
+        }
       }
     }
 

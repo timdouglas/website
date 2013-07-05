@@ -84,7 +84,7 @@
 .entypo-archive:before{content:"\e738"}
 .entypo-box:before{content:"\1f4e6"}
 .entypo-rss:before{content:"\e73a"}
-.entypo-phone:before{content:"\e73a"}
+.entypo-phone:before{content:"\1f4dE"}
 .entypo-cog:before{content:"\2699"}
 .entypo-tools:before{content:"\2692"}
 .entypo-share:before{content:"\e73c"}
@@ -359,6 +359,7 @@ h1,h2,h3,h4,h5{font-family:'Inder',sans-serif}h1 a,h2 a,h3 a,h4 a,h5 a{font-fami
 .page-wrapper .page header p{font-weight:400;font-size:18px;font-size:1.8rem}
 .page-wrapper .page article{margin:5px 0;margin:5rem 0;line-height:19px;line-height:1.9rem}.page-wrapper .page article p img[alt]{width:50%;height:auto;padding:10px;padding:1rem;float:right}@media only screen and (max-width:875px){.page-wrapper .page article p img[alt]{width:100%}}
 .page-wrapper .page article pre{background-color:#eee;width:75%;max-width:1000px;max-width:100rem;overflow-x:scroll;padding:.5rem;white-space:pre}@media only screen and (max-width:1075px){.page-wrapper .page article pre{width:100%}}
+.page-wrapper .page .pagination ul{display:inline-block;list-style:none;padding:0;margin:0}.page-wrapper .page .pagination ul li{display:inline-block;text-indent:0}
 .page-wrapper .page section ul.contact li{line-height:2.4rem}.page-wrapper .page section ul.contact li iframe{display:inline-block;vertical-align:middle}
 .page-wrapper .page blockquote{font-size:18px;font-family:'Carme',sans-serif}
 .page-wrapper .page .photos{line-height:0;-webkit-column-count:2;-webkit-column-gap:0;-moz-column-count:2;-moz-column-gap:0;column-count:2;column-gap:0}.page-wrapper .page .photos img{width:100%;height:auto}

@@ -15,6 +15,8 @@ css: [/css/home.css]
 <section class="welcome">
   Latest Ramblings
 </section>
+
+
 <section class="posts">
   <ul class="posts-list">
     {% for post in paginator.posts %}
@@ -25,18 +27,48 @@ css: [/css/home.css]
     </li>
     {% endfor %}
 </section>
-<div class="pagination">
-  {% if paginator.total_pages > 1 %}
+
+{% if paginator.total_pages > 1 %}
+  <div id="post-pagination" class="pagination">
+    <span class="pagination-title">More Posts:</span>
     {% if paginator.previous_page %}
-      <a href="/page{{paginator.previous_page}}" class="previous">Previous</a>
-    {% else %}
-      <span class="previous">Previous</span>
+      <span class="previous">
+        {% if paginator.previous_page == 1 %}
+          <a href="/">Previous</a>
+        {% else %}
+          <a href="{{ paginator.previous_page_path }}">Previous</a>
+        {% endif %}
+      </span>
     {% endif %}
-    <span class="page_number ">Page: {{paginator.page}} of {{paginator.total_pages}}</span>
+
+    <ul class="pages">
+      <li class="pagination-page">
+        {% if paginator.page == 1 %}
+          <span class="current-page">1</span>
+        {% else %}
+          <a href="/">1</a>
+        {% endif %}
+      </li>
+
+      {% for count in (2..paginator.total_pages) %}
+        <li class="pagination-page">
+          {% if count == paginator.page %}
+            <span class="current-page">{{ count }}</span>
+          {% else %}
+            <a href="/page{{ count }}">{{ count }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+
     {% if paginator.next_page %}
-      <a href="/page{{paginator.next_page}}" class="next ">Next</a>
-    {% else %}
-      <span class="next ">Next</span>
+      <span class="next">
+        {% if paginator.next_page == 2 %}
+          <a href="/page2/">Next</a>
+        {% else %}
+          <a href="{{ paginator.next_page_path }}">Next</a>
+        {% endif %}
+      </span>
     {% endif %}
-  {% endif %}
-</div>
+  </div>
+{% endif %}

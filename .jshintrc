@@ -1,0 +1,11 @@
+{
+  "browser": true,
+  "jquery": true,
+  "eqnull": true,
+  "strict": true,
+  "loopfunc": true,
+  "globals":
+  {
+    "Modernizr": true
+  }
+}

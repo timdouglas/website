@@ -1,0 +1,163 @@
+@import "mixins/all";
+@import "colours";
+@import "font-helpers";
+
+.dialog-overlay
+{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  background: rgba(129, 129, 129, 1);
+  z-index: 5000;
+  opacity: 0;
+  .transition(all 300ms ease);
+  .transform(translateZ(0));
+  
+  &.show-overlay
+  {
+    visibility: visible;
+    opacity: 0.4;
+  }
+}
+
+body.overlay-visible
+{
+  overflow: hidden;
+}
+
+.ae-dialog
+{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  
+  height: 210px;
+  width: 400px;
+  z-index: 5001;
+  
+  visibility: hidden;
+  
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -o-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  
+  .ae-dialog-content
+  {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    
+    background-color: #111;
+    
+    -webkit-transform: scale(0.5) translateZ(0);
+    -ms-transform: scale(0.5) translateZ(0);
+    -o-transform: scale(0.5) translateZ(0);
+    transform: scale(0.5) translateZ(0);
+    opacity: 0;
+    
+    .transition(all 300ms ease);
+    
+    .ae-dialog-top
+    {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: right;
+      padding: 0 5px;
+      
+      span
+      {
+        .text-hover;
+        
+        &:before
+        {
+          .icon-cancel-thin
+        }
+      }
+    }
+    
+    .ae-dialog-inner
+    {
+      padding: 10px;
+      
+      h2, h3
+      {
+        margin: 0;
+      }
+      
+      h3
+      {
+        .font-size-rems(1.1 * @base-font-size);
+      }
+    }
+  }
+  
+  &.show-dialog
+  {
+    visibility: visible;
+    
+    .ae-dialog-content
+    {
+      -webkit-transform: scale(1) translateZ(0);
+      -ms-transform: scale(1) translateZ(0);
+      -o-transform: scale(1) translateZ(0);
+      transform: scale(1) translateZ(0);
+      opacity: 1;
+    }
+  }
+}
+
+
+//WARNING DIALOG
+.warning-dialog-title
+{
+  margin-bottom: 10px !important; //override main dialog styles
+}
+
+.warning-dialog-main
+{
+  display: inline-block;
+  vertical-align: top;
+  height: 60%;
+  overflow: auto;
+  
+  &.warning-dialog-icon
+  {
+    width: 25%;
+    text-align: center;
+    
+    &:before
+    {
+      .icon-attention-triangle;
+      .font-size-rems(4.6*@base-font-size);
+    }
+  }
+  
+  &.warning-dialog-text
+  {
+    width: 70%;
+    padding-left: 15px;
+  }
+}
+
+.warning-dialog-options
+{
+  margin-top: 15px;
+  text-align: center;
+  
+  span
+  {
+    .font-size-rems(1.1*@base-font-size);
+    display: inline-block;
+    margin: 0 10px;
+    
+    .text-hover;
+  }
+}

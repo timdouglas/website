@@ -1,0 +1,211 @@
+@import '../lib/mixins/all';
+@import '../lib/colours';
+@import '../lib/font-helpers';
+
+.home
+{
+  text-align: right;
+  padding-right: (100px + @base-font-size);
+  padding-right: ~"calc(100px + 1rem)";
+  padding-bottom: @base-font-size * 1px;
+  padding-bottom: 1rem;
+  
+  .font-size-rems(1.2 * @base-font-size);
+  
+  color: @white;
+  
+  a
+  {
+    color: @white;
+  }
+  
+  ul
+  {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    
+    li
+    {
+      display: inline-block;
+      vertical-align: baseline;
+      .font-size-rems(1.2 * @base-font-size);
+      
+      &:before
+      {
+        content: '·';
+        padding: 0 10px;
+      }
+      
+      &:first-child:before
+      {
+        content: '';
+        padding: 0;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 500px)
+  {
+    text-align: center;
+    padding: 0 (@base-font-size * 1px) (@base-font-size * 1px);
+    padding: 0 1rem 1rem;
+  }
+}
+
+.highlight
+{
+  background-color: rgba(195, 138, 195, 0.7);
+}
+
+.bg
+{
+  .transition(~"background-image, color, opacity 1s ease");
+  
+  &:after
+  {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    .font-size-rems(0.8 * @base-font-size);
+  }
+}
+
+.slideshow
+{
+  @base: "/assets/images/";
+  @img0: url("@{base}blaise.jpg");
+  @img1: url("@{base}ny.jpg");
+  @img2: url("@{base}oz.jpg");
+  @img3: url("@{base}ballentoy.jpg");
+  @img4: url("@{base}harrier.jpg");
+  @img5: url("@{base}oz-sunset.jpg");
+  @img6: url("@{base}fireworks.jpg");
+  @img7: url("@{base}bletchley.jpg");
+  @copy: "© Tim Douglas 2015";
+  
+  .transition(color 1s ease);
+
+  &.fade-out .bg
+  {
+    opacity: 0;
+  }
+  
+  &.fade-in .bg
+  {
+    opacity: 1;
+  }
+  
+  &.img0
+  {
+    .bg
+    {
+      background-image: @img0;
+      
+      &:after
+      {
+        content: "View from Blaise Castle @{copy}";
+        color: @white;
+      }
+    }
+  }
+  
+  &.img1
+  {
+    .bg
+    {
+      background-image: @img1;
+      
+      &:after
+      {
+        content: "Jetty in NY @{copy}";
+        color: @white;
+      }
+    }
+  }
+  
+  &.img2
+  {
+    .bg
+    {
+      background-image: @img2;
+      
+      &:after
+      {
+        content: "Beach Fence, nr Perth @{copy}";
+        color: @black;
+      }
+    }
+  }
+  
+  &.img3
+  {
+    .bg
+    {
+      background-image: @img3;
+      
+      &:after
+      {
+        content: "Balintoy Harbour, NI @{copy}";
+        color: @white;
+      }
+    }
+  }
+  
+  &.img4
+  {
+    .bg
+    {
+      background-image: @img4;
+      
+      &:after
+      {
+        content: "Harrier @{copy}";
+        color: @black;
+      }
+    }
+  }
+  
+  &.img5
+  {
+    .bg
+    {
+      background-image: @img5;
+      
+      &:after
+      {
+        content: "Clouds at sunset @{copy}";
+        color: @white;
+      }
+    }
+  }
+  
+  &.img6
+  {
+    .bg
+    {
+      background-image: @img6;
+      
+      &:after
+      {
+        content: "Fireworks @{copy}";
+        color: @white;
+      }
+    }
+  }
+  
+  &.img7
+  {
+    .bg
+    {
+      background-image: @img7;
+      
+      &:after
+      {
+        content: "Tape, Bletchley Park @{copy}";
+        color: @white;
+      }
+    }
+  }
+}

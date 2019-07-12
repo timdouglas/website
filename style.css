@@ -1,0 +1,98 @@
+body {
+  background: black;
+  padding: 1rem;
+  color: white;
+  font-family: monospace;
+  position: relative;
+}
+
+button {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: #092c4e;
+  color: #ddd;
+  border: 0 none;
+  border-radius: 5px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  outline: #346798;
+}
+
+.boilerplate {
+  color: #555;
+}
+
+.boilerplate div .attr {
+  color: #888;
+}
+
+.boilerplate div .eq {
+  color: #999;
+}
+
+.boilerplate div .attr-val {
+  color: #888;
+}
+
+.boilerplate div .tag-val {
+  color: #ccc;
+}
+
+.boilerplate div.tab {
+  margin-left: 1rem;
+}
+
+.boilerplate div.tab2 {
+  margin-left: 2rem;
+}
+
+section.content {
+  margin-left: 3rem;
+}
+
+.h1-cursor, .h2-cursor, .p-cursor, .ul-cursor, .li-cursor {
+  margin-left: -5px;
+  display: inline-block;
+  width: 10px;
+  animation: Typewriter-cursor 1s infinite;
+}
+
+.tag {
+  color: grey;
+  margin-right: 6px;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+ul li {
+  margin-left: 1rem;
+}
+
+a {
+    text-decoration: none;
+  color: #a7925a;
+}
+
+a span {
+  text-decoration: underline;
+}
+
+a::before, a::after {
+  color: grey;
+  margin-right: 6px;
+}
+
+a::before {
+  content: '<a>';
+}
+
+a::after {
+  content: '</a>';
+  margin-left: 6px;
+  margin-right: 0;
+}
